@@ -4,3 +4,5 @@ torchvision
 gradio
 #accelerate
 #huggingface_hub==0.22.2
+azure-ai-inference
+azure-core

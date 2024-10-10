@@ -33,6 +33,9 @@ Pytorch/
 *.manifest
 *.spec
 
+# Git Atttributes
+.gitattributes
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt

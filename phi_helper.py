@@ -10,7 +10,7 @@ from azure.ai.inference.models import (
 from azure.core.credentials import AzureKeyCredential
 token = os.environ["GITHUB_TOKEN"]
 endpoint = "https://models.inference.ai.azure.com"
-model_name = "Phi-3.5-vision-instruct"
+model_name = "Phi-3.5-vision-instruct" # Example to change this to from Phi-3.5 SLM "Phi-3.5-vision-instruct" to a LLM such as GPT4o replace with "gpt-4o"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,

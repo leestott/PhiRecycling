@@ -1,14 +1,18 @@
+# Import libraries required 
 import gradio as gr
 import phi_helper as phi3v
 
+# Define the prompt for the recycling model
 prompt = "Is this recyclable?  Plastics and cardboard may be recycled.  Please answer 'YES, RECYCLABLE' or 'NO, TRASH'.  "
 ## NOTE: You may adjust the prompt for the recycling guidelines in your area.  See the exammple below.  
 #prompt = "Plastics and cardboard may be recycled.  Anything with a recycling symbol may be recycled.  Styrofoam may not be recycled.  Aerosol cans may not be recycled.  \n\nFocus on the item in the person's hand.  Is this recyclable?  Please answer 'YES, RECYCLABLE' or 'NO, TRASH'.  "
 
+# Wrapper function to call the image processing function from phi_helper
 def phi3v_wrapper(cameraPicPath):
     out = phi3v.call_with_single_local_image(cameraPicPath, prompt)
     return out
 
+# Function to set the output image based on the model's text output
 def set_image(txtModelOutput):
     output = txtModelOutput.replace(prompt, "", 1)
     print("Output is: " + output)
@@ -27,7 +31,7 @@ def set_image(txtModelOutput):
     return outputPic
 
 
-# UI using Gradio
+# UI using Gradio - Create the UI using Gradio
 with gr.Blocks() as demo:
     with gr.Row():
         with gr.Column(scale=2):
@@ -36,8 +40,9 @@ with gr.Blocks() as demo:
             outputPic = gr.Image(value=None, sources=[], type="filepath", show_label=False, interactive=False, show_download_button=False)
     with gr.Row():
         txtModelOutput = gr.Textbox(label = "AI-generated output", lines=6)
-
+   # Set up the upload event to call the phi3v_wrapper function
     cameraPic.upload(fn=phi3v_wrapper, inputs=cameraPic, outputs=txtModelOutput)
     txtModelOutput.change(fn=set_image, inputs=txtModelOutput, outputs=outputPic)
 
+# Launch the Gradio demo
 demo.launch()

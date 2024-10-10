@@ -1,6 +1,10 @@
 # Phi Recycling with GitHub Models
 
-New scenario unlocked with Phi vision model to sort trash and recycling at scale using [GitHub Marketplace models](https://github.com/marketplace/models) the GitHub Models are MaaS service offering which are FREE to utilise and offer a wide range of models for various use cases.
+New scenario unlocked with Phi vision model to sort trash and recycling. 
+
+The scenario is based on a potential new startup using GenAI solution.
+
+This demo is compare using Local based models provided by the [Hugging Face model catalog](https://huggingface.co) and Models as Service using [Azure AI Model Catalog](https://ai.azure.com) or [GitHub Marketplace models](https://github.com/marketplace/models) the Azure and GitHub Models offer MaaS service. Additionally the GitHub Marketplace Models offering are FREE to utilise and offer a wide range of models for various use cases.
 
 ## Overview 
 The Phi family of models shows the power of small language models.  In this demonstration, we will be using the latest version of Phi 3.5 with vision specifically.  
@@ -72,7 +76,25 @@ You need to ensure you have the Install the Azure AI Inference SDK using pip (Re
 pip install azure-ai-inference
 ```
 
-### First run
+### First run of Local Model
+
+Please ensure you run the command from the root directory of the project. The Local Model sample code is in the `localinference` directory. So ensure you switch the directory to `localinference` before running the below python command `Python recycling.py`.
+
+ 
+```
+conda create --name recycling python=3.10 -y
+conda activate recycling
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+pip install -r requirements.txt
+cd localinfernce
+python recycling.py
+```
+
+### First run of GitHub Models
+
+Please ensure you run the command from the root directory of the project. 
+
+ 
 ```
 conda create --name recycling python=3.10 -y
 conda activate recycling
@@ -80,8 +102,7 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 pip install -r requirements.txt
 python recycling.py
 ```
-
-## Gradio issues 
+## Gradio issues
 
 If you encounter issues with the UI ensure your using the latest version of Gradio 
 

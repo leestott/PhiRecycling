@@ -23,7 +23,7 @@ A new scenario that small language models like Phi could unlock is **sorting tra
 + https://www.earthday.org/how-our-trash-impacts-the-environment/
 + https://sustainabity.com/en/why-garbage-separation-matters-environmental-impact-and-benefits/
 
-Let's imagine a public park with trash and recycling bins as an example.  An image understanding model like Phi 3 with vision could decide if an item held up to a camera was trash or recyclable, so it could be disposed of properly.  The prompt could be easily modified for local recycling guidelines.  Phi 3 can handle the enormous scale of many people throwing things away, and it could run locally without the need for network connectivity in an outdoor space.  The relative cost of a large language model in the cloud plus its connectivity requirements may not make this feasible for large language models, but this is a scenario that becomes possible with a model like Phi.  
+Let's imagine a School, park with trash and recycling bins as an example.  An image understanding model like Phi 3.5 with vision could decide if an item held up to a camera was trash or recyclable, so it could be disposed of properly.  The prompt could be easily modified for local recycling guidelines of the school.  Phi 3-5 can handle the enormous scale of many people throwing things away, and it could run locally without the need for network connectivity in an outdoor space or on an embedded device location near recycling facilities.  The relative cost of a large language model in the cloud plus its connectivity requirements may not make this feasible for large language models, but this is a scenario that becomes possible with a model like Phi.  
 
 ## Demo Experience
 

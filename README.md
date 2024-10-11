@@ -111,7 +111,8 @@ pip install gradio --upgrade
 ```
 
 ```bash
-pip update gradio
+pip install --upgrade gradio
+
 ```
 
 ### Subsequent runs

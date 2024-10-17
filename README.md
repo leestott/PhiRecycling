@@ -80,7 +80,28 @@ pip install azure-ai-inference
 
 Please ensure you run the command from the root directory of the project. The Local Model sample code is in the `localinference` directory. So ensure you switch the directory to `localinference` before running the below python command `Python recycling.py`.
 
- 
+To download a Large Language Model (LLM) from Hugging Face for local inference, follow these steps:
+
+Step 1: Install Hugging Face CLI
+Install the Hugging Face CLI:
+
+```bash
+pip install huggingface_hub
+```
+
+Step 2: Download the Model
+Choose the Model: Identify the model you want to download from the Hugging Face Hub. Download the Model: Use the following command to download the model:
+
+```bash
+huggingface-cli download THE_MODEL_OWNER/THE_MODEL_NAME
+```
+
+Replace THE_MODEL_OWNER and THE_MODEL_NAME with the appropriate values for the model you want to download
+
+Step 3. Update 'phi_helper.py' with the model path 
+
+Step 4. Running the App
+
 ```
 conda create --name recycling python=3.10 -y
 conda activate recycling

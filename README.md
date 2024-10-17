@@ -79,7 +79,7 @@ pip install azure-ai-inference
 ### First run of Local Model
 
 **Note:**
-To Run this demo locally, you will need to download a model and have a GPU to run the model.
+To Run this demo locally, you will need to download a model and have a GPU to run the model. Inference time for a completed response using a Nvidia T500 with 4GB of memory averages 1300 seconds.
 
 #### Getting Started with Local Models
 
